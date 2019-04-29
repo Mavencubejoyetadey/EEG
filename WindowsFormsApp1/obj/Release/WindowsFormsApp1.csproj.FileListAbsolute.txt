@@ -1,0 +1,56 @@
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Release\WindowsFormsApp1.exe.config
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Release\WindowsFormsApp1.exe
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Release\WindowsFormsApp1.pdb
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Release\kayChart.dll
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.Form1.resources
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.csproj.GenerateResource.Cache
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.exe
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.pdb
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\libfftw3-3-x64.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\libfftw3-3-x86.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\WindowsFormsApp1.exe.config
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\WindowsFormsApp1.exe
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\WindowsFormsApp1.pdb
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\Eto.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\FFTW.NET.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\kayChart.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\MathNet.Numerics.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\Microsoft.Win32.Primitives.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\OxyPlot.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\OxyPlot.WindowsForms.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\System.AppContext.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\System.Console.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\System.Diagnostics.DiagnosticSource.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\System.Globalization.Calendars.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\System.IO.Compression.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\System.IO.Compression.ZipFile.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\System.IO.FileSystem.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\System.IO.FileSystem.Primitives.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\System.Net.Http.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\System.Net.Sockets.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\System.Security.Cryptography.Algorithms.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\System.Security.Cryptography.Encoding.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\System.Security.Cryptography.Primitives.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\System.Security.Cryptography.X509Certificates.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\System.Xml.ReaderWriter.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\Eto.xml
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\MathNet.Numerics.xml
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\OxyPlot.pdb
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\OxyPlot.xml
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\OxyPlot.WindowsForms.pdb
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\OxyPlot.WindowsForms.xml
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Release\System.Diagnostics.DiagnosticSource.xml
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\obj\Release\WindowsFormsApp1.CustomControl2.resources
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\obj\Release\EEGSoftWare.Form1.resources
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\obj\Release\WindowsFormsApp1.Form2.resources
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\obj\Release\WindowsFormsApp1.Form3.resources
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\obj\Release\WindowsFormsApp1.ListComponent.resources
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\obj\Release\WindowsFormsApp1.Properties.Resources.resources
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\obj\Release\WindowsFormsApp1.Settings.resources
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\obj\Release\WindowsFormsApp1.csproj.GenerateResource.Cache
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\obj\Release\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\obj\Release\WindowsFormsApp1.exe
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\obj\Release\WindowsFormsApp1.pdb

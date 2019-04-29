@@ -1,0 +1,240 @@
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.Cache
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\kayChart.dll
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\libfftw3-3-x64.dll
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\libfftw3-3-x86.dll
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\FFTW.NET.dll
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Microsoft.Win32.Primitives.dll
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.AppContext.dll
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Console.dll
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Globalization.Calendars.dll
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.IO.Compression.dll
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.IO.Compression.ZipFile.dll
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.IO.FileSystem.dll
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.IO.FileSystem.Primitives.dll
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Net.Http.dll
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Net.Sockets.dll
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Xml.ReaderWriter.dll
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ECG.resources
+C:\Users\JOYETA DEY\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojResolveAssemblyReference.cache
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\obj\Debug\EEGSoftWare.Form1.resources
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.Cache
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\bin\Debug\libfftw3-3-x64.dll
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\bin\Debug\libfftw3-3-x86.dll
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\bin\Debug\FFTW.NET.dll
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\bin\Debug\kayChart.dll
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\bin\Debug\Microsoft.Win32.Primitives.dll
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\bin\Debug\System.AppContext.dll
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\bin\Debug\System.Console.dll
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\bin\Debug\System.Globalization.Calendars.dll
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\bin\Debug\System.IO.Compression.dll
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\bin\Debug\System.IO.Compression.ZipFile.dll
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\bin\Debug\System.IO.FileSystem.dll
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\bin\Debug\System.IO.FileSystem.Primitives.dll
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\bin\Debug\System.Net.Http.dll
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\bin\Debug\System.Net.Sockets.dll
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\bin\Debug\System.Xml.ReaderWriter.dll
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ListComponent.resources
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.CustomControl2.resources
+C:\Users\JOYETA DEY\source\repos\EEGSoftware\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojResolveAssemblyReference.cache
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\libfftw3-3-x64.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\libfftw3-3-x86.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\FFTW.NET.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\kayChart.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\Microsoft.Win32.Primitives.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\System.AppContext.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\System.Console.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\System.Globalization.Calendars.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\System.IO.Compression.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\System.IO.Compression.ZipFile.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\System.IO.FileSystem.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\System.IO.FileSystem.Primitives.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\System.Net.Http.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\System.Net.Sockets.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.Algorithms.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.Encoding.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.Primitives.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\System.Xml.ReaderWriter.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.CustomControl2.resources
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\obj\Debug\EEGSoftWare.Form1.resources
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ListComponent.resources
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.Cache
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\MathNet.Numerics.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\MathNet.Numerics.xml
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Settings.resources
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form3.resources
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\Eto.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\OxyPlot.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\OxyPlot.WindowsForms.dll
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\Eto.xml
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\OxyPlot.pdb
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\OxyPlot.xml
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\OxyPlot.WindowsForms.pdb
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\bin\Debug\OxyPlot.WindowsForms.xml
+D:\fxps\WindowsFormsApp2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojResolveAssemblyReference.cache
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\Eto.dll
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\MathNet.Numerics.dll
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\Microsoft.Win32.Primitives.dll
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.AppContext.dll
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.Console.dll
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.Globalization.Calendars.dll
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.IO.Compression.dll
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.IO.Compression.ZipFile.dll
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.IO.FileSystem.dll
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.IO.FileSystem.Primitives.dll
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.Net.Http.dll
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.Net.Sockets.dll
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.Algorithms.dll
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.Encoding.dll
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.Primitives.dll
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.Xml.ReaderWriter.dll
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\Eto.xml
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\MathNet.Numerics.xml
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.CustomControl2.resources
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\EEGSoftWare.Form1.resources
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form3.resources
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ListComponent.resources
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Settings.resources
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.Cache
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MontageSetting.resources
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MontageComp.resources
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.CustomControl3Panel.resources
+D:\fxps\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojResolveAssemblyReference.cache
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\Eto.dll
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\MathNet.Numerics.dll
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\Microsoft.Win32.Primitives.dll
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.AppContext.dll
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.Console.dll
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.Globalization.Calendars.dll
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.IO.Compression.dll
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.IO.Compression.ZipFile.dll
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.IO.FileSystem.dll
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.IO.FileSystem.Primitives.dll
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.Net.Http.dll
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.Net.Sockets.dll
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.Algorithms.dll
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.Encoding.dll
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.Primitives.dll
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.Xml.ReaderWriter.dll
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\Eto.xml
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\MathNet.Numerics.xml
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.CustomControl3Panel.resources
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.CustomControl2.resources
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\EEGSoftWare.Form1.resources
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form3.resources
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ListComponent.resources
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MontageComp.resources
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MontageSetting.resources
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Settings.resources
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\Joyeta\WindowsFormsApp2 - old code\WindowsFormsApp2 - old code\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\EEG_Mavencube.accdb
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\Eto.dll
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\MathNet.Numerics.dll
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\Microsoft.Win32.Primitives.dll
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.dll
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\System.AppContext.dll
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\System.Console.dll
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\System.Globalization.Calendars.dll
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\System.IO.Compression.dll
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\System.IO.Compression.ZipFile.dll
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\System.IO.FileSystem.dll
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\System.IO.FileSystem.Primitives.dll
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\System.Net.Http.dll
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\System.Net.Sockets.dll
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.Algorithms.dll
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.Encoding.dll
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.Primitives.dll
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\System.Xml.ReaderWriter.dll
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\Eto.xml
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\MathNet.Numerics.xml
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.pdb
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.xml
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.CustomControl3Panel.resources
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.CustomControl2.resources
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\obj\Debug\EEGSoftWare.Form1.resources
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form3.resources
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ListComponent.resources
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MontageComp.resources
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MontageSetting.resources
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PatientReg.resources
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Settings.resources
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\fxps\WindowsFormsApp2 - old code2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
