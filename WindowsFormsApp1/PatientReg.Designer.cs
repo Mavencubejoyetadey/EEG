@@ -68,18 +68,6 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.p_record_data = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.patientDataTBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.eEGMavencubeDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eEG_MavencubeDataSet2 = new WindowsFormsApp1.EEG_MavencubeDataSet();
-            this.patientData_TBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.patient_TTableAdapter = new WindowsFormsApp1.EEG_MavencubeDataSetTableAdapters.Patient_TTableAdapter();
-            this.tableAdapterManager = new WindowsFormsApp1.EEG_MavencubeDataSetTableAdapters.TableAdapterManager();
-            this.patientData_TTableAdapter = new WindowsFormsApp1.EEG_MavencubeDataSetTableAdapters.PatientData_TTableAdapter();
-            this.eEG_MavencubeDataSet1 = new WindowsFormsApp1.EEG_MavencubeDataSet();
-            this.patientDataTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.patientDataTBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.patientDataTBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.patientDataTBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teststarttimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,6 +77,16 @@
             this.montageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hpassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lpassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patientDataTBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.patientDataTBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.eEGMavencubeDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.patientData_TBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.patient_TTableAdapter = new WindowsFormsApp1.EEG_MavencubeDataSetTableAdapters.Patient_TTableAdapter();
+            this.tableAdapterManager = new WindowsFormsApp1.EEG_MavencubeDataSetTableAdapters.TableAdapterManager();
+            this.patientData_TTableAdapter = new WindowsFormsApp1.EEG_MavencubeDataSetTableAdapters.PatientData_TTableAdapter();
+            this.patientDataTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.patientDataTBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.patientDataTBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patient_TBindingSource)).BeginInit();
@@ -100,15 +98,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.p_record_data.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientDataTBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientDataTBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eEGMavencubeDataSet2BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eEG_MavencubeDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientData_TBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eEG_MavencubeDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientDataTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientDataTBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientDataTBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patientDataTBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -465,66 +461,6 @@
             this.dataGridView2.Size = new System.Drawing.Size(482, 255);
             this.dataGridView2.TabIndex = 0;
             // 
-            // patientDataTBindingSource1
-            // 
-            this.patientDataTBindingSource1.DataMember = "PatientData_T";
-            this.patientDataTBindingSource1.DataSource = this.eEGMavencubeDataSet2BindingSource;
-            // 
-            // eEGMavencubeDataSet2BindingSource
-            // 
-            this.eEGMavencubeDataSet2BindingSource.DataSource = this.eEG_MavencubeDataSet2;
-            this.eEGMavencubeDataSet2BindingSource.Position = 0;
-            // 
-            // eEG_MavencubeDataSet2
-            // 
-            this.eEG_MavencubeDataSet2.DataSetName = "EEG_MavencubeDataSet";
-            this.eEG_MavencubeDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // patientData_TBindingSource
-            // 
-            this.patientData_TBindingSource.DataMember = "PatientData_T";
-            this.patientData_TBindingSource.DataSource = this.eEG_MavencubeDataSet;
-            // 
-            // patient_TTableAdapter
-            // 
-            this.patient_TTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Patient_TTableAdapter = this.patient_TTableAdapter;
-            this.tableAdapterManager.PatientData_TTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = WindowsFormsApp1.EEG_MavencubeDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // patientData_TTableAdapter
-            // 
-            this.patientData_TTableAdapter.ClearBeforeFill = true;
-            // 
-            // eEG_MavencubeDataSet1
-            // 
-            this.eEG_MavencubeDataSet1.DataSetName = "EEG_MavencubeDataSet";
-            this.eEG_MavencubeDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // patientDataTBindingSource
-            // 
-            this.patientDataTBindingSource.DataMember = "PatientData_T";
-            this.patientDataTBindingSource.DataSource = this.eEG_MavencubeDataSet1;
-            // 
-            // patientDataTBindingSource2
-            // 
-            this.patientDataTBindingSource2.DataMember = "PatientData_T";
-            this.patientDataTBindingSource2.DataSource = this.eEG_MavencubeDataSet;
-            // 
-            // patientDataTBindingSource3
-            // 
-            this.patientDataTBindingSource3.DataMember = "PatientData_T";
-            this.patientDataTBindingSource3.DataSource = this.eEG_MavencubeDataSet;
-            // 
-            // patientDataTBindingSource4
-            // 
-            this.patientDataTBindingSource4.DataMember = "PatientData_T";
-            this.patientDataTBindingSource4.DataSource = this.eEG_MavencubeDataSet;
-            // 
             // iDDataGridViewTextBoxColumn1
             // 
             this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
@@ -579,6 +515,45 @@
             this.lpassDataGridViewTextBoxColumn.HeaderText = "lpass";
             this.lpassDataGridViewTextBoxColumn.Name = "lpassDataGridViewTextBoxColumn";
             // 
+            // patientDataTBindingSource4
+            // 
+            this.patientDataTBindingSource4.DataMember = "PatientData_T";
+            this.patientDataTBindingSource4.DataSource = this.eEG_MavencubeDataSet;
+            // 
+            // patientDataTBindingSource1
+            // 
+            this.patientDataTBindingSource1.DataSource = this.eEGMavencubeDataSet2BindingSource;
+            // 
+            // patientData_TBindingSource
+            // 
+            this.patientData_TBindingSource.DataMember = "PatientData_T";
+            this.patientData_TBindingSource.DataSource = this.eEG_MavencubeDataSet;
+            // 
+            // patient_TTableAdapter
+            // 
+            this.patient_TTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Patient_TTableAdapter = this.patient_TTableAdapter;
+            this.tableAdapterManager.PatientData_TTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = WindowsFormsApp1.EEG_MavencubeDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // patientData_TTableAdapter
+            // 
+            this.patientData_TTableAdapter.ClearBeforeFill = true;
+            // 
+            // patientDataTBindingSource2
+            // 
+            this.patientDataTBindingSource2.DataMember = "PatientData_T";
+            this.patientDataTBindingSource2.DataSource = this.eEG_MavencubeDataSet;
+            // 
+            // patientDataTBindingSource3
+            // 
+            this.patientDataTBindingSource3.DataMember = "PatientData_T";
+            this.patientDataTBindingSource3.DataSource = this.eEG_MavencubeDataSet;
+            // 
             // PatientReg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -606,15 +581,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.p_record_data.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientDataTBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientDataTBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eEGMavencubeDataSet2BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eEG_MavencubeDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientData_TBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eEG_MavencubeDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientDataTBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientDataTBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientDataTBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patientDataTBindingSource4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -663,10 +636,8 @@
         private System.Windows.Forms.BindingSource patientData_TBindingSource;
         private EEG_MavencubeDataSetTableAdapters.PatientData_TTableAdapter patientData_TTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private EEG_MavencubeDataSet eEG_MavencubeDataSet1;
         private System.Windows.Forms.BindingSource patientDataTBindingSource;
         private System.Windows.Forms.BindingSource eEGMavencubeDataSet2BindingSource;
-        private EEG_MavencubeDataSet eEG_MavencubeDataSet2;
         private System.Windows.Forms.BindingSource patientDataTBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn pidDataGridViewTextBoxColumn;

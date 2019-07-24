@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
         public PatientReg()
         {
             InitializeComponent();
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=..\..\EEG_Mavencube.accdb";
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=EEG_Mavencube.accdb";
             
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
@@ -54,7 +54,7 @@ namespace WindowsFormsApp1
         private void PatientReg_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'eEG_MavencubeDataSet2.PatientData_T' table. You can move, or remove it, as needed.
-            this.patientData_TTableAdapter.Fill(this.eEG_MavencubeDataSet2.PatientData_T);
+          //  this.patientData_TTableAdapter.Fill(this.eEG_MavencubeDataSet2.PatientData_T);
             // TODO: This line of code loads data into the 'eEG_MavencubeDataSet1.PatientData_T' table. You can move, or remove it, as needed.
             this.patientData_TTableAdapter.Fill(this.eEG_MavencubeDataSet.PatientData_T);
             // TODO: This line of code loads data into the 'eEG_MavencubeDataSet.PatientData_T' table. You can move, or remove it, as needed.
@@ -222,6 +222,7 @@ namespace WindowsFormsApp1
             {
                 Form1 fm = new Form1(false);
                 fm.patient_id = P_ID;
+                fm.disableNextPrev();
                 fm.ShowDialog();
             }
            
@@ -270,7 +271,7 @@ namespace WindowsFormsApp1
             
         }
        
-        public void insertPatientRecord(string p_id,string start_time,string end_time, string data,string montage,string highpass,string lowpass)
+        public void insertPatientRecord(string p_id,string start_time,string end_time,String duration, string data,string montage,string highpass,string lowpass)
         {
            
             try
@@ -278,7 +279,7 @@ namespace WindowsFormsApp1
                 connection.Open();
                 OleDbCommand cmd = connection.CreateCommand();
                 // cmd.CommandText = "Insert into PatientData_T(p_id,test_start_time,test_end_time,data)Values('3','12:40','12:50','hello')";//'" + data + "'
-                cmd.CommandText = "Insert into PatientData_T(p_id,test_start_time,test_end_time,data,duration,montage,hpass,lpass)Values('" + p_id + "','" + start_time + "','" + end_time + "','" + data + "','"+getTimeDifference(start_time, end_time) +"','"+montage+"','"+highpass+"','"+lowpass+"')";//'" + data + "'
+                cmd.CommandText = "Insert into PatientData_T(p_id,test_start_time,test_end_time,data,duration,montage,hpass,lpass)Values('" + p_id + "','" + start_time + "','" + end_time + "','" + data + "','"+duration+"','"+montage+"','"+highpass+"','"+lowpass+"')";//'" + data + "'
                 cmd.Connection = connection;
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Recorded Successfully", "Congrats");
@@ -366,10 +367,17 @@ namespace WindowsFormsApp1
             fm.patientAge = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[3].Value.ToString() + " years";
             fm.p_low = dataGridView2.Rows[dataGridView2.CurrentRow.Index].Cells[8].Value.ToString();
             fm.p_high = dataGridView2.Rows[dataGridView2.CurrentRow.Index].Cells[7].Value.ToString();
-            fm.lineGraph.viewDataOnChart(j_data,fm.y_chart_min,fm.sample_rate);
+            fm.p_json_data = j_data;
+            String duration = dataGridView2.Rows[dataGridView2.CurrentRow.Index].Cells[5].Value.ToString();
+            fm.record_duration = Convert.ToInt32(TimeSpan.Parse(duration).TotalSeconds);
+            fm.pagecount = 1;
+            fm.checkNextPageAvailable();
+            fm.checkPrevPageAvailable();
+            fm.lineGraph.viewDataOnChartFromDB(j_data,fm.y_chart_min,fm.sample_rate, fm.record_duration,1);
             fm.viewMontage(dataGridView2.Rows[dataGridView2.CurrentRow.Index].Cells[6].Value.ToString());
-               // dataGridView2.Rows[dataGridView2.CurrentRow.Index].Cells[7].Value.ToString(),
-               // dataGridView2.Rows[dataGridView2.CurrentRow.Index].Cells[8].Value.ToString());
+           
+            // dataGridView2.Rows[dataGridView2.CurrentRow.Index].Cells[7].Value.ToString(),
+            // dataGridView2.Rows[dataGridView2.CurrentRow.Index].Cells[8].Value.ToString());
             fm.ShowDialog();
            
         }

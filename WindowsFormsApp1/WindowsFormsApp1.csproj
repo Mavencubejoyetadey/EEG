@@ -30,7 +30,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -286,6 +286,18 @@
     <None Include="Resources\close2.png" />
     <None Include="Resources\minimize.png" />
     <None Include="Resources\gard.jpg" />
+    <Content Include="Resources\next.png" />
+    <None Include="Resources\next1.png" />
+    <None Include="Resources\next2.png" />
+    <None Include="Resources\next_d.png" />
+    <Content Include="Resources\prev.png" />
+    <None Include="Resources\prev1.png" />
+    <None Include="Resources\prev2.png" />
+    <None Include="Resources\prev_d.png" />
+    <Content Include="Resources\rec_off.png" />
+    <None Include="Resources\rec_off1.png" />
+    <Content Include="Resources\rec_on.png" />
+    <None Include="Resources\rec_on1.png" />
     <Content Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />

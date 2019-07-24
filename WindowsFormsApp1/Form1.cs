@@ -14,6 +14,7 @@ using System.Diagnostics;
 using System.IO;
 using Newtonsoft.Json;
 using System.Linq;
+using System.Drawing.Imaging;
 
 namespace EEGSoftWare
 {
@@ -31,6 +32,8 @@ namespace EEGSoftWare
         public int x_range = 8;
         public double y_range = 1.2;
         public string patient_id;
+        int height_screen;
+        int width_screen;
         public Form1(bool data)
         {
             InitializeComponent();
@@ -39,23 +42,24 @@ namespace EEGSoftWare
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
             isPatientData = data;
-
+            height_screen = Screen.PrimaryScreen.Bounds.Height;
+            width_screen = Screen.PrimaryScreen.Bounds.Width;
             x_duration.Text = "" + (x_range);
             gain_y.Text = "" + (y_range);
             string[] ports = SerialPort.GetPortNames();
             settings.PortList.Items.AddRange(ports);
-            settings.bauderate.Text = "500000";
-            settings.PortList.SelectedIndex = 0;
+            settings.bauderate.Text = "1000000";
+           settings.PortList.SelectedIndex = 0;
 
-            
-           // panel3.Width = Convert.ToInt32(this.Width);
-          //  panel3.Height = 40;
-            panel4.Width = Convert.ToInt32(this.Width);
+
+            // panel3.Width = Convert.ToInt32(this.Width);
+            //  panel3.Height = 40;
+            panel4.Width = width_screen;//Convert.ToInt32(this.Width);
             panel4.Height = 80;
-            panel1.Height = Convert.ToInt32(this.Height);
-            panel1.Width = Convert.ToInt32(this.Width);
-            panel2.Height = Convert.ToInt32(this.Height);
-            panel2.Width = Convert.ToInt32(this.Width)-200;
+            panel1.Height = height_screen;//Convert.ToInt32(this.Height);
+            panel1.Width = width_screen;//Convert.ToInt32(this.Width);
+            panel2.Height =  height_screen-70;// Convert.ToInt32(this.Height);
+            panel2.Width = width_screen-200;//Convert.ToInt32(this.Width)-200;
             panel1.Location = new Point(0, 0);
             panel2.Location = new Point(100, 80);
             //panel3.Location = new Point(0, 32);
@@ -83,11 +87,11 @@ namespace EEGSoftWare
 
               tableLayoutPanel1.Parent = panel4;
               tableLayoutPanel1.BackColor = Color.Transparent;
-            pictureBox5.Location=new Point(this.Width-35,0);
-            pictureBox6.Location = new Point(this.Width - 70, 0);
+            pictureBox5.Location=new Point(width_screen-35,0);
+            pictureBox6.Location = new Point(width_screen - 70, 0);
             leftPanel.Location = new Point(0, 80);
             leftPanel.Width = 100;
-            leftPanel.Height = this.Height;
+            leftPanel.Height = Screen.PrimaryScreen.Bounds.Height-80;
             leftPanel.BackColor = Color.DarkSalmon;
             createBasicMontage();
 
@@ -96,8 +100,8 @@ namespace EEGSoftWare
         }
         private void createBasicMontage()
         {
-            String[] list = new String[] {"F1-F2","F2","F3","F4", "F5", "F6", "F7", "F8",
-            "F9","F10","F11","F12","F13","F14","F15","F16","F17","F18","F19","F20"};
+            String[] list = new String[] {"F19","F2","F2","F3", "F4", "F6", "F7", "F8",
+            "F9","F10","F11","F19","F13","F14","F15","F16","F17","F18","F19","F20"};
             montage1.Montage_channels.Add(new Montage("B-Map", list));
             if (isPatientData)
             {
@@ -174,7 +178,7 @@ namespace EEGSoftWare
         Form2 fm = new Form2();
         bool isPaused = false;
         bool isPortOpen = false;
-        public int sample_rate = 400;
+        public int sample_rate = 512;
 
         int i = 0;
         List<double> TimeList = new List<double>();
@@ -189,24 +193,18 @@ namespace EEGSoftWare
         }
         public string start_time;
         public string end_time;
+        public int count_record_data;
         private void start_pause_Click(object sender, EventArgs e)
         {
-            end_time = DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss tt");
-            lineGraph.loadDataFromChart();
-            string str = JsonConvert.SerializeObject(lineGraph.patientDataseies.Pseries);
-            lineGraph.p_data_list.Clear();
-            //var values = JsonConvert.DeserializeObject<Dictionary<string, string>>(str);
-            //values.ElementAt(0).Key
+            
             closed = true;
-            string montage2=montage_list.Text;
-            for (int i=0;i<labLleist.Count;i++)
-            {
-                CustomControl3Panel cp = labLleist[i] as CustomControl3Panel;
-                montage2 = montage2+"|"+ cp.label.Text;
-            }
-            pg.insertPatientRecord(patient_id,start_time,end_time,str,montage2,filterlist2.Text,filterList.Text);
+            
         }
-
+        public String secToTimeformatString(int time)
+        {
+            TimeSpan times = TimeSpan.FromSeconds(time);
+            return times.ToString(@"hh\:mm\:ss");
+        }
         private void onScroll(object sender, ScrollEventArgs e)
         {
             canvas.Invalidate();
@@ -245,7 +243,7 @@ namespace EEGSoftWare
         private Thread t;
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            start_time = DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss tt");
+            
             if (!isPortOpen)
             {
 
@@ -261,7 +259,10 @@ namespace EEGSoftWare
                 backgroundProc();
                 closed = false;
             }
-
+            else
+            {
+                closed = false;
+            }
 
 
 
@@ -287,28 +288,33 @@ namespace EEGSoftWare
 
 
         public bool flag = true;
-        public string get24Channel(string[] str)
+        public List<String> get24Channel(List<String> str)
         {
-            string data="";
-            for (int i=0;i<str.Length-2;i++)
+            List<String> data = new List<String>();
+            for (int i=0;i<str.Count;i++)
             {
-                int intValue = Convert.ToInt32(str[i]);
-                int intvalue2 = Convert.ToInt32(str[i+1]);
+              /*  int analogVal = 0;
+                byte secondPart = (byte)(analogVal >> 8);
+                int tempVal = analogVal << 8;
+                byte firstPart = (byte)(tempVal >> 8);
+                */
+              
+                int intValue = Convert.ToInt32(str[i+1]);//firstPart value
+                int intvalue2 = Convert.ToInt32(str[i]);//second value
+
+                int realVal = intvalue2 << 8;
+                realVal |= intValue;
                 i++;
-
-               
-
-                byte[] intBytes = BitConverter.GetBytes(intValue);
-                byte[] intBytes_2 = BitConverter.GetBytes(intvalue2);
-
-                byte[] intBytes_3 = Concat1(intBytes, intBytes_2);//intBytes.Concat(intBytes_2).ToArray();
-
-                int r = BitConverter.ToInt16(intBytes_3, 0);
-                data += r+ " ";
+                data.Add("" + realVal);
+                   // data += realVal + " ";
             }
-
+           
+            
             return data;
         }
+
+       
+      
         void readBuffer1()
         {
             readDataFromText();
@@ -347,7 +353,12 @@ namespace EEGSoftWare
         List<Complex> channel_list_20 = new List<Complex>();
         List<String> list_20_str = new List<string>();
         int b_count = 0;
-         byte[] Concat1(byte[] a, byte[] b)
+        int flag1 = 0;
+        Boolean first_data_flag = true;
+        int zero_counter = 0;
+        List<String> data_list = new List<string>();
+        int sample_fill_count = 0;
+        byte[] Concat1(byte[] a, byte[] b)
         {
             byte[] output = new byte[a.Length + b.Length];
             for (int i = 0; i < a.Length; i++)
@@ -356,6 +367,9 @@ namespace EEGSoftWare
                 output[a.Length + j] = b[j];
             return output;
         }
+       
+        int recvData;
+        List<String> str = new List<String>();
         void ReadBuffer()
 
         {
@@ -379,141 +393,143 @@ namespace EEGSoftWare
                 }
             }
 
-
+          
             while (!closed)
             {
-                double data;
+               
+                
+               
+               
 
-                string line1 = "";//aserialPort.ReadLine();
-
-               while (true)
-                {
-                    
                     if (aserialPort.BytesToRead > 0)
                     {
-                        
 
-                        int analogVal = aserialPort.ReadByte();
-                       
-                       
-                        if (analogVal == 0)
+
+                         recvData = aserialPort.ReadByte();
+
+
+                        data_list.Add(""+recvData);
+                      //  Debug.WriteLine(""+ recvData);
+                        if(recvData == 0)
                         {
-
-                            if (c_count == 1)
+                            zero_counter++;
+                            if (zero_counter>=3) // to check end of line 
                             {
-                                c_count = 0;
-                              //  Debug.WriteLine("getting 00");
-                                
                                
-                                break;
+                                if (first_data_flag) //for garbadge data drop first list 
+                                {
+                                    data_list.RemoveRange(0, data_list.Count-1);
+                                    zero_counter = 0;
+                                    first_data_flag = false;
+                                }
+                                else // valid end of data
+                                {
+                                    
+                                    data_list.RemoveRange(data_list.Count - 3, 3);
+                                 //  Debug.WriteLine("len:"+ data_list.Count);
+                                    if (checkForLength(data_list))
+                                    {
+                                         loadMontage( get24Channel(data_list));
+                                        data_list.RemoveRange(0, data_list.Count);
+                                        zero_counter = 0;
+                                        sample_fill_count++;
+
+                                        if(sample_fill_count>=sample_rate) // when sample fill
+                                        {
+
+                                           // closed = true;
+                                            sample_fill_count = 0;
+
+                                            count_record_data++;
+                                            CustomControl2 cc = lineList[0] as CustomControl2;
+
+                                            cc.loadData(labLleist, l_filter, h_filter, isNotch, notch_range,
+                                                x_range, y_range, sample_rate, chart_top, sweep_rate, sweep_multiplier);
+
+
+                                            for (int t = 0; t < labLleist.Count; t++)
+                                            {
+                                                CustomControl3Panel cc1 = labLleist[t] as CustomControl3Panel;
+                                                cc1.controlList.Clear();
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        data_list.RemoveRange(0, data_list.Count);
+                                        zero_counter = 0;
+                                    }
+                                }
                             }
-                            c_count++;
                         }
                         else
                         {
-                            c_count = 0;
+                            zero_counter = 0;
                         }
-                        line1 += analogVal + " ";
-                       // Debug.WriteLine("string line: " + line1);
-                    }
-                }
-                
-                //Convert.ToBase64CharArray
-                List<String> str = new List<String>();
-                String[] str1 = line1.Split(' ');
-                string line = "";
-                if (str1.Length == 50)
-                {
-                    line = get24Channel(str1);
-                }
 
 
-               // Debug.WriteLine("string len: "+ str1.Length);
-                if (line.Length == 48)
-                {
-                    list_20_str.Add(line);
-                    if (list_20_str.Count > 1)
-                    {
-                       // Debug.WriteLine("timer start");
-                        stopW.Start();
-                    }
+               /*         if (list_20_str.Count == sample_rate)
+                        {
+                            count_record_data++;
+                            Debug.WriteLine("time with real data " + stopW.Elapsed);
+                            stopW.Restart();
+                            // closed = true;
 
-                    for (int j = 0; j < 24; j++)
-                    {
-                        bool result1 = double.TryParse(line.Split(' ')[j], out data);
-                        if (result1)
-                            str.Add(line.Split(' ')[j]);
-                        else
-                            str.Add("0");
-                    }
-                    loadMontage(str);
-                 /*   for (int k = 0; k < labLleist.Count; k++)
-                    {
-                        double doubleValue = double.Parse(str[k]);
-                        //   System.Diagnostics.Debug.WriteLine(""+ doubleValue);
-                        Complex c1 = doubleValue;
-                        CustomControl3Panel cc = labLleist[k] as CustomControl3Panel;
-                       
-                        cc.controlList.Add(c1);
-                        //System.Diagnostics.Debug.WriteLine(channel_list_20[k]);// as List<Complex>).Add(c1);
-                    }
+                            //System.Diagnostics.Debug.WriteLine("after ifft " + DateTime.Now.ToString("HH:mm:ss:ff"));
 
 
+                            // Channellist.Invoke((MethodInvoker)delegate
+                            // {
+                            list_20_str.Clear();
 
-
-
-                    /* double doubleValue = double.Parse(line);
-                     //   System.Diagnostics.Debug.WriteLine(""+ doubleValue);
-                     System.Numerics.Complex c1 = doubleValue;
-
-                     list.Add(c1);
-                     */
-
-                    if (list_20_str.Count == sample_rate)
-                    {
-                        Debug.WriteLine("time with real data " + stopW.Elapsed);
-                       // closed = true;
-
-                        //System.Diagnostics.Debug.WriteLine("after ifft " + DateTime.Now.ToString("HH:mm:ss:ff"));
-
-
-                        // Channellist.Invoke((MethodInvoker)delegate
-                        // {
-                        list_20_str.Clear();
-                       
 
                             CustomControl2 cc = lineList[0] as CustomControl2;
-                        
-                            cc.loadData(labLleist, l_filter, h_filter, isNotch, notch_range, 
-                                x_range, y_range, sample_rate, chart_top,sweep_rate,sweep_multiplier);
-                       
 
-                        for (int t = 0; t < labLleist.Count; t++)
-                        {
-                            CustomControl3Panel cc1 = labLleist[t] as CustomControl3Panel;
-                            cc1.controlList.Clear();
-                        }
+                            cc.loadData(labLleist, l_filter, h_filter, isNotch, notch_range,
+                                x_range, y_range, sample_rate, chart_top, sweep_rate, sweep_multiplier);
 
+
+                            for (int t = 0; t < labLleist.Count; t++)
+                            {
+                                CustomControl3Panel cc1 = labLleist[t] as CustomControl3Panel;
+                                cc1.controlList.Clear();
+                            }
+
+                        }*/
                     }
-                }
 
-                else
-                {
-                    closeBtn.Invoke((MethodInvoker)delegate
+                    else
                     {
-                        closeBtn.AppendText("incorrect data \n");
-                    });
+                        closeBtn.Invoke((MethodInvoker)delegate
+                        {
+                            closeBtn.AppendText("incorrect data \n");
+                        });
+                    }
+
+
+
+
+                    // System.Diagnostics.Debug.WriteLine("data1: " + line.ToString());
                 }
 
-
-
-
-                // System.Diagnostics.Debug.WriteLine("data1: " + line.ToString());
-            }
-
-
+           
 
         }
+        public Boolean checkForLength(List<String> str)
+        {
+            if (str.Count == 48)
+                return true;
+            else
+                return false;
+        }
+        
+        int no1;
+        int no2;
+        double doubleValue1;
+        double doubleValue2;
+        CustomControl3Panel cc;
+        Complex c1;
+
 
         public void loadMontage(List<String>str)
         {
@@ -522,28 +538,33 @@ namespace EEGSoftWare
                 String[] ch_list = montage_channel_list[i].Split('-');
                 if (ch_list.Length>1)
                 {
-                    int no1 = Int32.Parse(ch_list[0].ElementAt(1).ToString());
-                    int no2 = Int32.Parse(ch_list[1].ElementAt(1).ToString());
+                     no1 = Int32.Parse(ch_list[0].ElementAt(1).ToString());
+                     no2 = Int32.Parse(ch_list[1].ElementAt(1).ToString());
 
 
-                    double doubleValue1 = double.Parse(str[no1-1]);
-                    double doubleValue2 = double.Parse(str[no2-1]);
+                    doubleValue1 = double.Parse(str[no1-1]);
+                    doubleValue2 = double.Parse(str[no2-1]);
 
-                    Complex c1 = doubleValue1- doubleValue2;
-                    CustomControl3Panel cc = labLleist[i] as CustomControl3Panel;
+                   c1 = doubleValue1- doubleValue2;
+                     cc = labLleist[i] as CustomControl3Panel;
 
                     cc.controlList.Add(c1);
+                    
+                    
                 }
                 else
                 {
-                    int no1 = Int32.Parse(ch_list[0].Substring(1).ToString());
-                    double doubleValue1 = double.Parse(str[no1-1]);
-                    Complex c1 = doubleValue1;
-                    CustomControl3Panel cc = labLleist[i] as CustomControl3Panel;
+                     no1 = Int32.Parse(ch_list[0].Substring(1).ToString());
+                    doubleValue1 = double.Parse(str[no1-1]);
+                     c1 = doubleValue1;
+                     cc = labLleist[i] as CustomControl3Panel;
 
                     cc.controlList.Add(c1);
                 }
             }
+
+            
+            
         }
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -552,7 +573,14 @@ namespace EEGSoftWare
 
         private void notch_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if(notch.SelectedIndex == 0)
+            {
+                isNotch = true;
+            }
+            else
+            {
+                isNotch = false;
+            }
         }
         private Random rnd = new Random();
         public int channelIndex;
@@ -666,6 +694,9 @@ namespace EEGSoftWare
         public String p_montage = "";
         public String p_low = "";
         public String p_high = "";
+        public String p_json_data = "";
+        public int record_duration = 0;
+        public int pagecount = 1;
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             notch_range = Convert.ToInt32(comboBox1.SelectedItem);
@@ -899,7 +930,7 @@ namespace EEGSoftWare
             CustomControl2 cc = lineList[0] as CustomControl2;
             if (cc.isCreated)
                 cc.clearChart();
-            cc.loadTimeline(sweep_multiplier);
+            //cc.loadTimeline(sweep_multiplier);
         }
         public int panel_y;
         private void sensitivity_list_SelectedIndexChanged(object sender, EventArgs e)
@@ -949,6 +980,90 @@ namespace EEGSoftWare
         }
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            
+            if (lineGraph.isRecordStarted == false)
+            {
+                start_time = DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss tt");
+                lineGraph.isRecordStarted = true;
+                record.Image = WindowsFormsApp1.Properties.Resources.rec_on;
+            }
+            else
+            {
+                string str = JsonConvert.SerializeObject(lineGraph.patientDataseies.Pseries);
+                lineGraph.p_data_list.Clear();
+                
+                string montage2 = montage_list.Text;
+                for (int i = 0; i < labLleist.Count; i++)
+                {
+                    CustomControl3Panel cp = labLleist[i] as CustomControl3Panel;
+                    montage2 = montage2 + "|" + cp.label.Text;
+                }
+
+                pg.insertPatientRecord(patient_id, start_time, end_time, secToTimeformatString(lineGraph.duration_count), str, montage2, filterlist2.Text, filterList.Text);
+
+                lineGraph.clearRecord();
+                record.Image = WindowsFormsApp1.Properties.Resources.rec_off;
+            }
+        }
+
+        private void prev_Click(object sender, EventArgs e)
+        {
+            pagecount--;
+            lineGraph.viewDataOnChartFromDB(p_json_data, y_chart_min, sample_rate, record_duration, pagecount);
+
+            checkNextPageAvailable();
+            checkPrevPageAvailable();
+        }
+        public Boolean checkNextPageAvailable()
+        {
+            Boolean flag = false;
+            if (record_duration>10*(pagecount))
+            {
+                next.Enabled = true;
+                next.Image = WindowsFormsApp1.Properties.Resources.next1;
+            }
+            else
+            {
+                next.Image = WindowsFormsApp1.Properties.Resources.next_d;
+                next.Enabled = false;
+              
+            }
+            return flag;
+        }
+        public Boolean checkPrevPageAvailable()
+        {
+            Boolean flag = false;
+            if (pagecount>1)
+            {
+                prev.Enabled = true;
+                prev.Image = WindowsFormsApp1.Properties.Resources.prev1;
+            }
+            else
+            {
+                prev.Image = WindowsFormsApp1.Properties.Resources.prev_d;
+                prev.Enabled = false;
+
+            }
+            return flag;
+        }
+
+        public void disableNextPrev()
+        {
+            prev.Image = WindowsFormsApp1.Properties.Resources.prev_d;
+            prev.Enabled = false;
+            next.Image = WindowsFormsApp1.Properties.Resources.next_d;
+            next.Enabled = false;
+        }
+       
+
+      
+        private void next_click(object sender, EventArgs e)
+        {
+            pagecount++;
+                lineGraph.viewDataOnChartFromDB(p_json_data, y_chart_min, sample_rate, record_duration, pagecount);
+          
+            checkNextPageAvailable();
+            checkPrevPageAvailable();
 
         }
     }
