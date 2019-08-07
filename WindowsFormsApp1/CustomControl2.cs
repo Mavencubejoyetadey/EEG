@@ -227,9 +227,9 @@ namespace WindowsFormsApp1
             chart2.ChartAreas[0].AxisY.MajorTickMark.Enabled = false;
             chart2.ChartAreas[0].AxisX.MinorTickMark.Enabled = false;
             chart2.ChartAreas[0].AxisY.MinorTickMark.Enabled = false;
-            chart2.ChartAreas[0].AxisY.Maximum = 20;
+            chart2.ChartAreas[0].AxisY.Maximum = series_count * y_axis_scale;
             //chart1.ChartAreas[0].AxisY.MaximumAutoSize = 5;
-            chart2.ChartAreas[0].AxisY.Minimum = -chart_min;// -chart_min;//(series_count * 6);
+            chart2.ChartAreas[0].AxisY.Minimum = 0;// -chart_min;//(series_count * 6);
 
             // chart1.ChartAreas[0].AxisY.Minimum = 0;
             // chart1.Scale(new SizeF(1.0f, 5f));
@@ -298,10 +298,26 @@ namespace WindowsFormsApp1
         int range;
         double realPart;
         public void loadData(List<CustomControl3Panel> list2, int l_filter, int h_filter, bool isNotch, int notch_range, 
-            int x_r, double y_r, int sample_rate,int top,double sweep_rate,double sweep_index)
+            int x_r, double y_r, int sample_rate,int top,double sweep_rate,double sweep_index,int gain)
         {
-            
+            value_gain = gain;
             isCreated = true;
+            if (sweep_rate == 30)
+            {
+                chart_time = 10;
+            }
+            else if (sweep_rate == 60)
+            {
+                chart_time = 5;
+            }
+            else if (sweep_rate == 15)
+            {
+                chart_time = 15;
+            }
+            else
+            {
+                chart_time = 20;
+            }
             sweep_multiplier = sweep_index;
             sweep = (sweep_rate * dpi) / (40 * 25.4);
             chart_top = top;
@@ -480,8 +496,8 @@ namespace WindowsFormsApp1
 
         int drop_rate = 5;
         int point_per_sec = 400;
-        int chart_time = 10;
-       
+        int chart_time =15;
+        int value_gain = 30;
         public List<PatientDataClass> p_data_list = new List<PatientDataClass>();
         public PatientDataSeries patientDataseies = new PatientDataSeries();
         private void OnTimedEvent(object source, ElapsedEventArgs e)
@@ -491,7 +507,7 @@ namespace WindowsFormsApp1
             chart1.Invoke((MethodInvoker)delegate
             {
 
-            x_part = (chart_X_max / ((point_per_sec / drop_rate) * chart_time));
+            x_part = chart_X_max / ((point_per_sec / drop_rate) * chart_time);
                 remove_count = (point_per_sec * chart_time) / drop_rate;
                 pixelValue = 0.290;
                 if (graph_data.Count > 0)
@@ -521,7 +537,7 @@ namespace WindowsFormsApp1
                                 if (chart1.Series[d].Points.Count > 0)
                                 {
 
-                                    if (Math.Round(chart1.Series[d].Points.Last().XValue, 2)==Math.Round(chart_X_max,2))//* sweep_multiplier * sweep / pixelValue
+                                    if (Math.Round(chart1.Series[d].Points.Last().XValue, 2)== Math.Round(chart_X_max,2))//* sweep_multiplier * sweep / pixelValue
                                             // if (chart1.Series[d].Points.Last().XValue == 400*sweep/pixelValue)
                                     {
                                        // Debug.WriteLine("after page one: " + chart1.Series[d].Points.Count);
@@ -543,24 +559,20 @@ namespace WindowsFormsApp1
                                 }
 
 
-                                 valueSum = graph_data[d].in_buffer[i]*10;
+                                 valueSum = graph_data[d].in_buffer[i]*value_gain;
 
                                 if (i % drop_rate == 0)
                                 {
                                     //lastChartX + (sweep / pixelValue/2)
                                     //chart1.Series[d].Points.AddXY(lastChartX + 12.8, (valueSum + (chart_max - (y_axis_scale / 2 * ((d + 1) * 2 - 1)))));
 
-                                    chart1.Series[d].Points.AddXY(lastChartX+ x_part ,(valueSum + (chart_max - (y_axis_scale/2 * ((d + 1) * 2 - 1)))));//(chart_max-(150*((d+1)*2-1))//- (y_scale / 2) - (y_scale * d)// (d * 40));//- (0.29 * chart_top)
-                                                                                                                                      //  PatientDataClass p = new PatientDataClass();
-                                                                                                                                        // Debug.WriteLine(chart1.Series[d].Points.Count);
-                                                                                                                                        // chart1.ResetAutoValues();
-                                                                                                                                        //   p.x_val = lastChartX + sweep / pixelValue / 2;
+                                    chart1.Series[d].Points.AddXY(lastChartX+ x_part, (valueSum + (chart_max - (y_axis_scale/2 * ((d + 1) * 2 - 1)))));//(chart_max-(150*((d+1)*2-1))//- (y_scale / 2) - (y_scale * d)// (d * 40));//- (0.29 * chart_top)
                                                                                                                                         //   p.y_val = valueSum - (y_scale / 2) - (y_scale * d);
                                     if (isRecordStarted)
                                     {
-                                        patientDataseies.Pseries[d].x_val.Add(lastChartX + sweep / pixelValue / 2);
+                                        patientDataseies.Pseries[d].x_val.Add(lastChartX + x_part );//sweep / pixelValue / 2
                                         patientDataseies.Pseries[d].y_val.Add(valueSum + (chart_max - (y_axis_scale / 2 * ((d + 1) * 2 - 1))));
-                                        if (patientDataseies.Pseries[d].x_val.Count>(400*duration_count)+400)
+                                        if (patientDataseies.Pseries[d].x_val.Count>((point_per_sec/drop_rate) * duration_count)+ (point_per_sec / drop_rate))
                                         {
                                             duration_count++;
                                         }
@@ -740,6 +752,7 @@ namespace WindowsFormsApp1
                 }
                
             }
+            x_part = (chart_X_max / ((point_per_sec / drop_rate) * chart_time));
             double last = 0.0;
             for (int d = 0; d < records.Count; d++)
             {
@@ -747,9 +760,10 @@ namespace WindowsFormsApp1
                 last = 0.0;//last + 2.83464566929134 / 0.290 / 2;
                 for (int i = data_count; i < data_count_to; i++)
                 {
-                    chart1.Series[d].Points.AddXY(last+ 2.83464566929134 / 0.290 / 2, records[d].y_val[i]);
+                    chart1.Series[d].Points.AddXY(last+ x_part, records[d].y_val[i]);
 
-                    last  = chart1.Series[d].Points.Last().XValue;                }
+                    last  = chart1.Series[d].Points.Last().XValue;
+                }
                 chart1.Invalidate();
             }
 
@@ -781,7 +795,7 @@ namespace WindowsFormsApp1
             int pagecount = pg_c;
             int totalDataCount = records[0].x_val.Count;
             int dataplot_count_persec = totalDataCount / duration;
-            int data_count = (pagecount - 1) * dataplot_count_persec;
+            int data_count = (pagecount - 1) * dataplot_count_persec*10;
             int data_count_to = 0;
 
             if (duration >= 10 * pagecount)
@@ -795,12 +809,15 @@ namespace WindowsFormsApp1
             }
 
 
-
+            x_part = (chart_X_max / ((point_per_sec / drop_rate) * chart_time));
+            double last = 0.0;
             for (int d = 0; d < records.Count; d++)
             {
+                last = 0.0;
                 for (int i = data_count; i < data_count_to; i++)
                 {
-                    chart2.Series[d].Points.AddXY(records[d].x_val[i], records[d].y_val[i]);
+                    chart2.Series[d].Points.AddXY(last+x_part, records[d].y_val[i]);
+                    last = chart2.Series[d].Points.Last().XValue;
                 }
                 chart2.Invalidate();
             }
@@ -1133,8 +1150,11 @@ namespace WindowsFormsApp1
            
             if (record_duration > 10 * page_count)
             {
+
                 page_count++;
+
                 viewDataOnPrintFromDB(recorded_data, record_duration, page_count);
+               
                 e.HasMorePages = true;
                 return;
             }
