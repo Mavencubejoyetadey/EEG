@@ -28,6 +28,7 @@ namespace EEGSoftWare
         public int l_filter = 1;
         public bool isNotch = true;
         public int notch_range = 5;
+        public int gain = 3*10;
         public Form3 fm3 = new Form3();
         public int x_range = 8;
         public double y_range = 1.2;
@@ -100,8 +101,8 @@ namespace EEGSoftWare
         }
         private void createBasicMontage()
         {
-            String[] list = new String[] {"F19","F2","F2","F3", "F4", "F6", "F7", "F8",
-            "F9","F10","F11","F19","F13","F14","F15","F16","F17","F18","F19","F20"};
+            String[] list = new String[] {"F19","F2","F2","F10", "F4", "F6", "F7", "F8",
+            "F9","F12","F11","F19","F13","F14","F15","F16","F17","F18","F19","F20"};
             montage1.Montage_channels.Add(new Montage("B-Map", list));
             if (isPatientData)
             {
@@ -329,7 +330,7 @@ namespace EEGSoftWare
                            CustomControl2 cc = lineList[0] as CustomControl2;
 
                            cc.loadData(labLleist, l_filter, h_filter, isNotch, notch_range,
-                               x_range, y_range, sample_rate, chart_top, sweep_rate, sweep_multiplier);
+                               x_range, y_range, sample_rate, chart_top, sweep_rate, sweep_multiplier,gain);
 
 
                            for (int t = 0; t < labLleist.Count; t++)
@@ -444,7 +445,7 @@ namespace EEGSoftWare
                                             CustomControl2 cc = lineList[0] as CustomControl2;
 
                                             cc.loadData(labLleist, l_filter, h_filter, isNotch, notch_range,
-                                                x_range, y_range, sample_rate, chart_top, sweep_rate, sweep_multiplier);
+                                                x_range, y_range, sample_rate, chart_top, sweep_rate, sweep_multiplier, gain);
 
 
                                             for (int t = 0; t < labLleist.Count; t++)
@@ -930,7 +931,7 @@ namespace EEGSoftWare
             CustomControl2 cc = lineList[0] as CustomControl2;
             if (cc.isCreated)
                 cc.clearChart();
-            //cc.loadTimeline(sweep_multiplier);
+            cc.loadTimeline(sweep_multiplier);
         }
         public int panel_y;
         private void sensitivity_list_SelectedIndexChanged(object sender, EventArgs e)
@@ -1065,6 +1066,11 @@ namespace EEGSoftWare
             checkNextPageAvailable();
             checkPrevPageAvailable();
 
+        }
+        
+        private void comboBox_gain_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            gain = Convert.ToInt32(comboBox_gain.SelectedItem) *10;
         }
     }
 }

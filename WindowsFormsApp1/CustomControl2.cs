@@ -302,7 +302,7 @@ namespace WindowsFormsApp1
         {
             value_gain = gain;
             isCreated = true;
-            if (sweep_rate == 30)
+          /*  if (sweep_rate == 30)
             {
                 chart_time = 10;
             }
@@ -317,7 +317,7 @@ namespace WindowsFormsApp1
             else
             {
                 chart_time = 20;
-            }
+            }*/
             sweep_multiplier = sweep_index;
             sweep = (sweep_rate * dpi) / (40 * 25.4);
             chart_top = top;
@@ -496,7 +496,7 @@ namespace WindowsFormsApp1
 
         int drop_rate = 5;
         int point_per_sec = 400;
-        int chart_time =15;
+        int chart_time =10;
         int value_gain = 30;
         public List<PatientDataClass> p_data_list = new List<PatientDataClass>();
         public PatientDataSeries patientDataseies = new PatientDataSeries();
@@ -542,7 +542,7 @@ namespace WindowsFormsApp1
                                     {
                                        // Debug.WriteLine("after page one: " + chart1.Series[d].Points.Count);
                                         lastChartX = 0;
-                                        timeline_flag = true;
+                                      //  timeline_flag = true;
                                         chart1.Series[d].Points[(chart1.Series[d]).Points.Count - 1].IsEmpty = true;
                                         
                                     }
@@ -567,7 +567,7 @@ namespace WindowsFormsApp1
                                     //chart1.Series[d].Points.AddXY(lastChartX + 12.8, (valueSum + (chart_max - (y_axis_scale / 2 * ((d + 1) * 2 - 1)))));
 
                                     chart1.Series[d].Points.AddXY(lastChartX+ x_part, (valueSum + (chart_max - (y_axis_scale/2 * ((d + 1) * 2 - 1)))));//(chart_max-(150*((d+1)*2-1))//- (y_scale / 2) - (y_scale * d)// (d * 40));//- (0.29 * chart_top)
-                                                                                                                                        //   p.y_val = valueSum - (y_scale / 2) - (y_scale * d);
+                                                                                                                               //   p.y_val = valueSum - (y_scale / 2) - (y_scale * d);
                                     if (isRecordStarted)
                                     {
                                         patientDataseies.Pseries[d].x_val.Add(lastChartX + x_part );//sweep / pixelValue / 2
@@ -577,7 +577,14 @@ namespace WindowsFormsApp1
                                             duration_count++;
                                         }
                                     }
+                                    if (Math.Round(chart1.Series[d].Points.Last().XValue, 2) == Math.Round(chart_X_max, 2))//* sweep_multiplier * sweep / pixelValue
+                                                                                                                           // if (chart1.Series[d].Points.Last().XValue == 400*sweep/pixelValue)
+                                    {
 
+                                        timeline_flag = true;
+
+
+                                    }
                                     valueSum = 0;
                                    
                                     if (chart1.Series[d].Points.Count> remove_count)//400
@@ -663,6 +670,8 @@ namespace WindowsFormsApp1
                 {
                     timeline_flag = false;
                     loadTimeline(sweep_multiplier, _start);
+                    
+                    
                     count++;
 
                 }
@@ -865,13 +874,14 @@ namespace WindowsFormsApp1
         int _start = 0;
         public void loadTimeline(double sweep_multiplier,int start=0)
         {
+          
             _left = 10;
             _start = start;
             while (time_panel.Controls.Count > 0)
             {
                 time_panel.Controls.RemoveAt(0);
             }
-            if (sweep_multiplier >= 1)
+            if (sweep_multiplier == 1)//30
             {
                 for (int i = 0; i <= 10; i++)
                 {
@@ -885,7 +895,7 @@ namespace WindowsFormsApp1
                 }
                 _start = _start + Convert.ToInt32(sweep_multiplier) * 10;
             }
-            else
+            else if(sweep_multiplier == 0.5)//60
             {
                 for (int i = 0; i <= 5; i++)
                 {
@@ -893,11 +903,43 @@ namespace WindowsFormsApp1
                     lab.Text = getTime(_start+i);
                     lab.Location = new Point(_left, 0);
                     lab.Name = "" + i;
-                    _left += 200;
+                    _left += ((Screen.PrimaryScreen.Bounds.Width - 100) / 5) - 40; ;
                     time_panel.Controls.Add(lab);
-                  
+                   
                 }
-                _start = _start + Convert.ToInt32(sweep_multiplier) * 5;
+                _start = _start + 5;
+                Debug.WriteLine(_start);
+                // _start = _start + Convert.ToInt32(sweep_multiplier) * 5;
+            }
+            else if (sweep_multiplier == 2)//15
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    Label lab = new Label();
+                    lab.Text = getTime(_start + i*5);
+                   
+                    lab.Location = new Point(_left, 0);
+                    lab.Name = "" + (i*5);
+                    _left += ((Screen.PrimaryScreen.Bounds.Width - 100) / 5) - 20;
+                    time_panel.Controls.Add(lab);
+                   
+                }
+                _start = _start + (4 * 5);
+                // _start = _start + Convert.ToInt32(sweep_multiplier) * 5;
+            }
+            else
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    Label lab = new Label();
+                    lab.Text = getTime(_start + i*10);
+                    lab.Location = new Point(_left, 0);
+                    lab.Name = "" + i*10;
+                    _left += ((Screen.PrimaryScreen.Bounds.Width - 100) / 5) - 20; ;
+                    time_panel.Controls.Add(lab);
+
+                }
+                _start = _start + (4 * 10);
             }
         }
 
@@ -1175,7 +1217,7 @@ namespace WindowsFormsApp1
 
             Panel topP = new Panel();
             topP.Size = new Size(900, 90);
-            topP.Location = new Point(100,0);
+            topP.Location = new Point(90,0);
             Panel dp = new Panel();
             dp.Size = new Size(this.Width, 1);
             dp.BackColor = Color.Black;
@@ -1321,7 +1363,7 @@ namespace WindowsFormsApp1
             //  time_panel_print.Size = new Size(900, 12);
             //  time_panel_print.Location = new Point(100, 300);
             time_panel_print.Size = new Size(this.Width, 12);
-            time_panel_print.Location = new Point(100, Screen.PrimaryScreen.Bounds.Height  - 13);
+            time_panel_print.Location = new Point(90, Screen.PrimaryScreen.Bounds.Height  - 13);
 
              p1.Controls.Add(chart2);
             chart2.Parent = p1;
@@ -1358,7 +1400,7 @@ namespace WindowsFormsApp1
                printDocument1.DefaultPageSettings.Landscape = true;
           //      printDocument1.DefaultPageSettings.PaperSize = paperSize;
                printPreviewDialog1.Show();
-          
+          //  printDocument1.Print();
 
             /*  PaperSize ps = new PaperSize();
               ps.RawKind = (int)PaperKind.;*/

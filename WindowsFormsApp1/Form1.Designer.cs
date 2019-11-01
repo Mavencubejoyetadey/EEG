@@ -29,20 +29,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.comboBox_gain = new System.Windows.Forms.ComboBox();
+            this.record = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.filterList = new System.Windows.Forms.ComboBox();
             this.filterlist2 = new System.Windows.Forms.ComboBox();
             this.notch = new System.Windows.Forms.ComboBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.Channellist = new System.Windows.Forms.ComboBox();
             this.montage_list = new System.Windows.Forms.ComboBox();
             this.sensitivity_list = new System.Windows.Forms.ComboBox();
-            this.sweep_combo = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.y_range_track = new System.Windows.Forms.TrackBar();
             this.x_range_track = new System.Windows.Forms.TrackBar();
+            this.prev = new System.Windows.Forms.PictureBox();
+            this.next = new System.Windows.Forms.PictureBox();
             this.sppedbar = new System.Windows.Forms.TrackBar();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -82,28 +88,23 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.record = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.prev = new System.Windows.Forms.PictureBox();
-            this.next = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
+            this.sweep_combo = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.record)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.y_range_track)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_range_track)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prev)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.next)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sppedbar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.record)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prev)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.next)).BeginInit();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,7 +121,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 0F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 52F));
@@ -131,6 +132,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.comboBox_gain, 13, 0);
             this.tableLayoutPanel1.Controls.Add(this.record, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
@@ -154,6 +156,52 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1350, 49);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // comboBox_gain
+            // 
+            this.comboBox_gain.FormattingEnabled = true;
+            this.comboBox_gain.Items.AddRange(new object[] {
+            "3",
+            "5",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.comboBox_gain.Location = new System.Drawing.Point(1113, 3);
+            this.comboBox_gain.Name = "comboBox_gain";
+            this.comboBox_gain.Size = new System.Drawing.Size(44, 21);
+            this.comboBox_gain.TabIndex = 21;
+            this.comboBox_gain.SelectedIndexChanged += new System.EventHandler(this.comboBox_gain_SelectedIndexChanged);
+            // 
+            // record
+            // 
+            this.record.Image = global::WindowsFormsApp1.Properties.Resources.rec_off;
+            this.record.Location = new System.Drawing.Point(58, 3);
+            this.record.Name = "record";
+            this.record.Size = new System.Drawing.Size(39, 41);
+            this.record.TabIndex = 1;
+            this.record.TabStop = false;
+            this.record.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.pause;
+            this.pictureBox3.Location = new System.Drawing.Point(103, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(39, 39);
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.start_pause_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.start;
+            this.pictureBox1.Location = new System.Drawing.Point(13, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(39, 39);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // filterList
             // 
@@ -200,6 +248,16 @@
             this.notch.Size = new System.Drawing.Size(94, 21);
             this.notch.TabIndex = 0;
             this.notch.SelectedIndexChanged += new System.EventHandler(this.notch_SelectedIndexChanged);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.print;
+            this.pictureBox4.Location = new System.Drawing.Point(848, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(59, 39);
+            this.pictureBox4.TabIndex = 17;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // Channellist
             // 
@@ -254,21 +312,8 @@
             this.sensitivity_list.Name = "sensitivity_list";
             this.sensitivity_list.Size = new System.Drawing.Size(94, 21);
             this.sensitivity_list.TabIndex = 11;
+            this.sensitivity_list.Visible = false;
             this.sensitivity_list.SelectedIndexChanged += new System.EventHandler(this.sensitivity_list_SelectedIndexChanged);
-            // 
-            // sweep_combo
-            // 
-            this.sweep_combo.FormattingEnabled = true;
-            this.sweep_combo.Items.AddRange(new object[] {
-            "7.5",
-            "15",
-            "30",
-            "60"});
-            this.sweep_combo.Location = new System.Drawing.Point(748, 3);
-            this.sweep_combo.Name = "sweep_combo";
-            this.sweep_combo.Size = new System.Drawing.Size(94, 21);
-            this.sweep_combo.TabIndex = 18;
-            this.sweep_combo.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // comboBox1
             // 
@@ -312,6 +357,26 @@
             this.x_range_track.Visible = false;
             this.x_range_track.Scroll += new System.EventHandler(this.x_range_Scroll);
             // 
+            // prev
+            // 
+            this.prev.Image = global::WindowsFormsApp1.Properties.Resources.prev1;
+            this.prev.Location = new System.Drawing.Point(948, 3);
+            this.prev.Name = "prev";
+            this.prev.Size = new System.Drawing.Size(44, 43);
+            this.prev.TabIndex = 19;
+            this.prev.TabStop = false;
+            this.prev.Click += new System.EventHandler(this.prev_Click);
+            // 
+            // next
+            // 
+            this.next.Image = global::WindowsFormsApp1.Properties.Resources.next1;
+            this.next.Location = new System.Drawing.Point(1000, 3);
+            this.next.Name = "next";
+            this.next.Size = new System.Drawing.Size(47, 43);
+            this.next.TabIndex = 20;
+            this.next.TabStop = false;
+            this.next.Click += new System.EventHandler(this.next_click);
+            // 
             // sppedbar
             // 
             this.sppedbar.Location = new System.Drawing.Point(1027, 118);
@@ -347,17 +412,17 @@
             // chart2
             // 
             this.chart2.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart2.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
             this.chart2.Location = new System.Drawing.Point(447, 109);
             this.chart2.Name = "chart2";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart2.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart2.Series.Add(series2);
             this.chart2.Size = new System.Drawing.Size(300, 300);
             this.chart2.TabIndex = 5;
             this.chart2.Text = "chart2";
@@ -403,7 +468,7 @@
             // button3
             // 
             this.button3.Enabled = false;
-            this.button3.Location = new System.Drawing.Point(1112, 35);
+            this.button3.Location = new System.Drawing.Point(1170, 194);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 13;
@@ -421,6 +486,7 @@
             this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 15;
             this.label2.Text = "Sensitivity";
+            this.label2.Visible = false;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
@@ -627,7 +693,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(741, 26);
+            this.label1.Location = new System.Drawing.Point(638, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 13);
             this.label1.TabIndex = 32;
@@ -664,66 +730,6 @@
             this.panel2.Size = new System.Drawing.Size(839, 393);
             this.panel2.TabIndex = 26;
             // 
-            // record
-            // 
-            this.record.Image = global::WindowsFormsApp1.Properties.Resources.rec_off;
-            this.record.Location = new System.Drawing.Point(58, 3);
-            this.record.Name = "record";
-            this.record.Size = new System.Drawing.Size(39, 41);
-            this.record.TabIndex = 1;
-            this.record.TabStop = false;
-            this.record.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.pause;
-            this.pictureBox3.Location = new System.Drawing.Point(103, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.start_pause_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.start;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.print;
-            this.pictureBox4.Location = new System.Drawing.Point(848, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(59, 39);
-            this.pictureBox4.TabIndex = 17;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // prev
-            // 
-            this.prev.Image = global::WindowsFormsApp1.Properties.Resources.prev1;
-            this.prev.Location = new System.Drawing.Point(948, 3);
-            this.prev.Name = "prev";
-            this.prev.Size = new System.Drawing.Size(44, 43);
-            this.prev.TabIndex = 19;
-            this.prev.TabStop = false;
-            this.prev.Click += new System.EventHandler(this.prev_Click);
-            // 
-            // next
-            // 
-            this.next.Image = global::WindowsFormsApp1.Properties.Resources.next1;
-            this.next.Location = new System.Drawing.Point(1000, 3);
-            this.next.Name = "next";
-            this.next.Size = new System.Drawing.Size(47, 43);
-            this.next.TabIndex = 20;
-            this.next.TabStop = false;
-            this.next.Click += new System.EventHandler(this.next_click);
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
@@ -744,6 +750,20 @@
             this.label8.Size = new System.Drawing.Size(46, 13);
             this.label8.TabIndex = 25;
             this.label8.Text = "Channel";
+            // 
+            // sweep_combo
+            // 
+            this.sweep_combo.FormattingEnabled = true;
+            this.sweep_combo.Items.AddRange(new object[] {
+            "7.5",
+            "15",
+            "30",
+            "60"});
+            this.sweep_combo.Location = new System.Drawing.Point(748, 3);
+            this.sweep_combo.Name = "sweep_combo";
+            this.sweep_combo.Size = new System.Drawing.Size(94, 21);
+            this.sweep_combo.TabIndex = 18;
+            this.sweep_combo.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -782,20 +802,20 @@
             this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.record)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.y_range_track)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_range_track)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prev)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.next)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sppedbar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.record)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prev)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.next)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
@@ -860,10 +880,11 @@
         private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox sweep_combo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox prev;
         private System.Windows.Forms.PictureBox next;
+        private System.Windows.Forms.ComboBox comboBox_gain;
+        private System.Windows.Forms.ComboBox sweep_combo;
     }
 }
 
